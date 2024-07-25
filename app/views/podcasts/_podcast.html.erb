@@ -1,0 +1,22 @@
+<div id="<%= dom_id podcast %>">
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Title:</strong>
+    <%= podcast.title %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Description:</strong>
+    <%= podcast.description %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Audio file:</strong>
+    <%= link_to podcast.audio_file.filename, podcast.audio_file if podcast.audio_file.attached? %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Category:</strong>
+    <%= podcast.category_id %>
+  </p>
+
+</div>
